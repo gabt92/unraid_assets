@@ -27,4 +27,5 @@
   <Config Name="Printer Model" Target="PRINTER_MODEL" Default="QL-810W" Mode="" Description="Brother QL model used by brother_ql. For QL-810Wc, use QL-810W." Type="Variable" Display="always" Required="true" Mask="false">QL-810W</Config>
   <Config Name="Label Size" Target="LABEL_SIZE" Default="62" Mode="" Description="Brother DK label size. 62 is for 62mm continuous roll." Type="Variable" Display="always" Required="true" Mask="false">62</Config>
   <Config Name="Dry Run" Target="DRY_RUN" Default="false" Mode="" Description="If true, print requests are simulated and no job is sent to the printer." Type="Variable" Display="always" Required="true" Mask="false">false</Config>
+  <Config Name="Label Red Ink" Target="LABEL_RED_INK" Default="false" Mode="" Description="Set to true only with Brother black+red DK tape. Cru and Mariné print in red; leave false for black-only rolls." Type="Variable" Display="always" Required="false" Mask="false">false</Config>
 </Container>
