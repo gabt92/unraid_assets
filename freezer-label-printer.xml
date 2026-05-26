@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>freezer-label-printer</Name>
+  <Repository>ghcr.io/YOUR_GITHUB_USERNAME/freezer-label-printer:latest</Repository>
+  <Registry>https://github.com/YOUR_GITHUB_USERNAME/freezer-label-printer/pkgs/container/freezer-label-printer</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/YOUR_GITHUB_USERNAME/freezer-label-printer/issues</Support>
+  <Project>https://github.com/YOUR_GITHUB_USERNAME/freezer-label-printer</Project>
+  <Overview>Local web app for generating, previewing, printing, and reprinting freezer/sous-vide labels on a Brother QL-810W/QL-810Wc printer.</Overview>
+  <Category>Productivity: Tools:</Category>
+  <WebUI>http://[IP]:[PORT:8000]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/freezer-label-printer/main/unraid/freezer-label-printer.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/freezer-label-printer/main/unraid/freezer-label-printer.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Web UI Port" Target="8000" Default="8099" Mode="tcp" Description="Host port used to access the web app." Type="Port" Display="always" Required="true" Mask="false">8099</Config>
+  <Config Name="App Data" Target="/app/data" Default="/mnt/user/appdata/freezer-label-printer/data" Mode="rw" Description="Persistent app data, including history.json." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/freezer-label-printer/data</Config>
+  <Config Name="Printer URI" Target="PRINTER_URI" Default="tcp://10.69.4.34" Mode="" Description="Brother printer network URI. Example: tcp://10.69.4.34" Type="Variable" Display="always" Required="true" Mask="false">tcp://10.69.4.34</Config>
+  <Config Name="Printer Model" Target="PRINTER_MODEL" Default="QL-810W" Mode="" Description="Brother QL model used by brother_ql. For QL-810Wc, use QL-810W." Type="Variable" Display="always" Required="true" Mask="false">QL-810W</Config>
+  <Config Name="Label Size" Target="LABEL_SIZE" Default="62" Mode="" Description="Brother DK label size. 62 is for 62mm continuous roll." Type="Variable" Display="always" Required="true" Mask="false">62</Config>
+  <Config Name="Dry Run" Target="DRY_RUN" Default="false" Mode="" Description="If true, print requests are simulated and no job is sent to the printer." Type="Variable" Display="always" Required="true" Mask="false">false</Config>
+</Container>
